@@ -1,0 +1,47 @@
+<h1>Welcome to LJMU Index of Assets</h1>
+
+
+<% if flash[:notice] %>
+<p style="color:green;">
+<%=flash[:notice]%>
+</p>
+<% end%>
+
+<p><%= link_to "New Assets", new_asset_path %></p>
+<p><%= link_to "Show", assets %></p>
+<p><%= link_to "Edit", edit_assets_path(assets) %></p>
+<p><%= link_to "Destroy", assets, :confirm => 'Are you sure?', :method => :delete %></p>
+<body>
+
+<table border="1" style="background-color:1567b3; border-color:#ffffff" width="1000" cellpadding="4" cellspacing="6">
+  <tr>
+    <th>Title</th>
+    <th>Purchasen</th>
+    <th>Requisition</th>
+    <th>Orderd</th>
+    <th>Location</th>
+    <th>Description</th>
+  </tr>
+  <% for assets in @assets %>
+    <tr>
+    
+      <td><%=h link_to "#{assets.title}", assets %></td>
+      <td><%=h assets.purchaseN %></td>
+      <td><%=h assets.requisition %></td>
+      <td><%=h assets.orderD %></td>
+      <td><%=h assets.location %></td>
+      <td><%=h assets.description %></td>
+      
+    </tr>
+  <% end %>
+</table>
+
+<p style="font-family:verdana,arial,sans-serif;font-size:10px;">
+
+</div>
+</body>
+</p>
+
+
+
+

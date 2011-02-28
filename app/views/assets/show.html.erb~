@@ -1,0 +1,32 @@
+<% title "Assets" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @assets.title %>
+</p>
+<p>
+  <strong>Purchasen:</strong>
+  <%=h @assets.purchaseN %>
+</p>
+<p>
+  <strong>Requisition:</strong>
+  <%=h @assets.requisition %>
+</p>
+<p>
+  <strong>Orderd:</strong>
+  <%=h @assets.orderD %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%=h @assets.location %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @assets.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_assets_path(@assets) %> |
+  <%= link_to "Destroy", @assets, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", assets_path %>
+</p>

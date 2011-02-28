@@ -1,0 +1,23 @@
+<% form_for @assets do |f| %>
+  <%= f.error_messages %>
+ 
+  <p><%= f.label :title %></p>
+  <p><%= f.text_field :title %></p>
+
+  <p><%= f.label :purchaseN %> </p>
+  <p><%= f.text_field :purchaseN %></p>
+  
+  <p><%= f.label :requisition %></p>
+  <p><%= f.text_field :requisition %></p>
+ 
+  <p><%= f.label :orderD %></p>
+  <p><%= f.text_field :orderD %></p>
+  
+  <p><%= f.label :location %></p>
+  <p><%= f.text_area :location %></p>
+  
+   <p><%= f.label :description %></p>
+   <p><%= f.text_area :description %></p>
+  
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,3 @@
+class Assets < ActiveRecord::Base
+  attr_accessible :title, :purchaseN, :requisition, :orderD, :location, :description
+end
